@@ -4,8 +4,8 @@ export const GithubSGV = () => {
   return (
     <Fragment>
       <svg
-        width="35px"
-        height="35px"
+        width="30px"
+        height="30px"
         viewBox="0 0 48 48"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

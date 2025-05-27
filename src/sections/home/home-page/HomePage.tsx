@@ -13,7 +13,6 @@ export const HomePage = () => {
           Desenvolvedor FullStack - C# / Typescript - com foco em Backend.
         </span>
         <SocialBox socialItems={socialItemsData} />
-
         <StackBox stacks={stacksData} />
       </div>
     </ContentWrapper>
