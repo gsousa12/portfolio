@@ -1,3 +1,4 @@
+import { Footer } from "../../../shared/components/footer/Footer";
 import { SectionTitle } from "../../../shared/components/section-title/SectionTitle";
 import { SocialBox } from "../../../shared/components/social-box/SocialBox";
 import { StackBox } from "../../../shared/components/stack-box/StackBox";
@@ -9,11 +10,15 @@ export const HomePage = () => {
     <ContentWrapper>
       <div className="flex flex-col">
         <SectionTitle label="Olá," />
-        <span>
-          Desenvolvedor FullStack - C# / Typescript - com foco em Backend.
-        </span>
+        <p className="block mt-4 isolate">
+          Meu nome é Gabriel - Desenvolvedor FullStack, com foco em Backend.
+          Entusiasta do Typescript, Node.js/Bun e React. Aqui compartilho meus
+          projetos, artigos e pensamentos sobre tecnologia e desenvolvimento de
+          software. Sinta-se à vontade para se conectar comigo!
+        </p>
         <SocialBox socialItems={socialItemsData} />
         <StackBox stacks={stacksData} />
+        <Footer />
       </div>
     </ContentWrapper>
   );

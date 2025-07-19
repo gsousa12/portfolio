@@ -1,4 +1,5 @@
 export const menuItemsData = [
-  { label: "Projetos", href: "/projects" },
-  { label: "Artigos", href: "/articles" },
+  { label: "/home", href: "/home" },
+  { label: "/projects", href: "/projects" },
+  { label: "/articles", href: "/articles" },
 ];

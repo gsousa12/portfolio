@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@layer base {
+  * {
+    font-size: medium;
+    word-spacing: 0.02rem;
+  }
+  body {
+    font-family: "Nunito", sans-serif;
+  }
+}
