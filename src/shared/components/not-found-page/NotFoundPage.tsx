@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
+import { useMobileDetect } from "../../hooks/useMobileDetect";
 
 export const NotFoundPage = () => {
+  const isMobile = useMobileDetect();
   const navigate = useNavigate();
 
   const handleBack = () => {
@@ -8,7 +10,11 @@ export const NotFoundPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div
+      className={`flex flex-col items-center justify-center ${
+        isMobile ? "mt-45 mb-45" : "mt-50 mb-50"
+      }`}
+    >
       <h1 className="text-4xl font-bold mb-2">404</h1>
       <p className="mb-6 text-gray-600">Página não encontrada.</p>
       <button

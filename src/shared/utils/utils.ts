@@ -11,6 +11,7 @@ export const getStackColors = (
     NodeJs: { color: "bg-green-400", labelColor: "white" },
     ElysiaJs: { color: "bg-purple-400", labelColor: "white" },
     Redis: { color: "bg-red-400", labelColor: "white" },
+    Bun: { color: "bg-orange-400", labelColor: "white" },
   };
 
   return colorMap[tech] || { color: "bg-gray-400", labelColor: "white" };

@@ -12,7 +12,7 @@ export const ProjectsListData: ProjectItem[] = [
     name: "Rate Limit with Leaky Bucket",
     description:
       "A rate limit implementation using the leaky bucket algorithm.",
-    stack: ["ElysiaJs", "Redis", "TypeScript"],
+    stack: ["Bun", "ElysiaJs", "Redis", "TypeScript"],
     imageUrl:
       "https://miro.medium.com/v2/resize:fit:1358/1*8DxENfn29bzwA00jFUTCFA.png",
     websiteUrl: null,
