@@ -18,7 +18,6 @@ export const HomePage = () => {
         </p>
         <SocialBox socialItems={socialItemsData} />
         <StackBox stacks={stacksData} />
-        <Footer />
       </div>
     </ContentWrapper>
   );

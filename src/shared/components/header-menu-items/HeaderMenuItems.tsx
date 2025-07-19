@@ -30,12 +30,8 @@ export const HeaderMenuItems = ({ menuItems }: HeaderMenuItemsProps) => {
             {isActive && (
               <span
                 className="
-                  mt-1               
-                  w-1 h-1            
-                  border-x-4 border-x-transparent
-                  border-t-0        
-                  border-b-4 border-b-blue-500
-                "
+                  mt-1 w-1 h-1 border-x-4 border-x-transparent 
+                  border-t-0 border-b-4 border-b-blue-500"
               />
             )}
           </Link>
