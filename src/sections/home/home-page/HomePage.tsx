@@ -1,4 +1,3 @@
-import { Footer } from "../../../shared/components/footer/Footer";
 import { SectionTitle } from "../../../shared/components/section-title/SectionTitle";
 import { SocialBox } from "../../../shared/components/social-box/SocialBox";
 import { StackBox } from "../../../shared/components/stack-box/StackBox";
