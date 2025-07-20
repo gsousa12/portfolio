@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useMobileDetect } from "../../hooks/useMobileDetect";
+import { useMobileDetect } from "@hooks/useMobileDetect";
 
 export const NotFoundPage = () => {
   const isMobile = useMobileDetect();

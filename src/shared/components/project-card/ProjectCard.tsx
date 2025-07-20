@@ -1,6 +1,6 @@
-import { ProjectItem } from "../../datas/project-list-datas";
-import { useMobileDetect } from "../../hooks/useMobileDetect";
-import { getStackColors } from "../../utils/utils";
+import { ProjectItem } from "@datas/project-list-datas";
+import { useMobileDetect } from "@hooks/useMobileDetect";
+import { getStackColors } from "@utils/utils";
 import { ActionButton } from "../action-button/ActionButton";
 import { Badge } from "../badge/Badge";
 import { GlobeSGV } from "../sgvs/GlobeSGV";

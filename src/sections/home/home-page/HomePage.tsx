@@ -1,8 +1,8 @@
-import { SectionTitle } from "../../../shared/components/section-title/SectionTitle";
-import { SocialBox } from "../../../shared/components/social-box/SocialBox";
-import { StackBox } from "../../../shared/components/stack-box/StackBox";
-import { ContentWrapper } from "../../../shared/components/wrappers/content-wrapper/ContentWrapper";
-import { socialItemsData, stacksData } from "../../../shared/datas/home-datas";
+import { SectionTitle } from "@components/section-title/SectionTitle";
+import { SocialBox } from "@components/social-box/SocialBox";
+import { StackBox } from "@components/stack-box/StackBox";
+import { ContentWrapper } from "@components/wrappers/content-wrapper/ContentWrapper";
+import { socialItemsData, stacksData } from "@datas/home-page-datas";
 
 export const HomePage = () => {
   return (

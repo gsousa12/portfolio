@@ -1,6 +1,6 @@
-import { ContentWrapper } from "../../../shared/components/wrappers/content-wrapper/ContentWrapper";
-import { SectionTitle } from "../../../shared/components/section-title/SectionTitle";
-import { ProjectsList } from "../../../shared/components/projects-list/ProjectsList";
+import { ContentWrapper } from "@components/wrappers/content-wrapper/ContentWrapper";
+import { SectionTitle } from "@components/section-title/SectionTitle";
+import { ProjectsList } from "@components/projects-list/ProjectsList";
 
 export const ProjectsPage = () => {
   return (

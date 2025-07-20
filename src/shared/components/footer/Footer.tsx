@@ -1,4 +1,4 @@
-import { useMobileDetect } from "../../hooks/useMobileDetect";
+import { useMobileDetect } from "@hooks/useMobileDetect";
 
 export const Footer = () => {
   const isMobile = useMobileDetect();

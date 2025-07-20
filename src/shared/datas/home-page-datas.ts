@@ -1,4 +1,4 @@
-import { SocialItem } from "../components/social-box/SocialBox";
+import { SocialItem } from "@components/social-box/SocialBox";
 
 export const socialItemsData: SocialItem[] = [
   { title: "Github", icon: "github", href: "https://github.com/gsousa12/" },

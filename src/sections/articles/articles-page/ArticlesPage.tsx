@@ -1,5 +1,5 @@
-import { SectionTitle } from "../../../shared/components/section-title/SectionTitle";
-import { ContentWrapper } from "../../../shared/components/wrappers/content-wrapper/ContentWrapper";
+import { SectionTitle } from "@components/section-title/SectionTitle";
+import { ContentWrapper } from "@components/wrappers/content-wrapper/ContentWrapper";
 
 export const ArticlesPage = () => {
   return (

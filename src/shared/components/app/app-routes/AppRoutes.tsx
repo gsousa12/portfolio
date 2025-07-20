@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import { NotFoundPage } from "../../not-found-page/NotFoundPage";
-import { HomePage } from "../../../../sections/home/home-page/HomePage";
-import { ArticlesPage } from "../../../../sections/articles/articles-page/ArticlesPage";
-import { ProjectsPage } from "../../../../sections/projects/projects-page/ProjectsPage";
-import { RateLimitLeakyBucket } from "../../../../sections/articles/contents/rate-limit-with-leaky-bucket/RateLimitLeakyBucket";
+import { HomePage } from "@home/home-page/HomePage";
+import { ArticlesPage } from "@articles/articles-page/ArticlesPage";
+import { ProjectsPage } from "@projects/projects-page/ProjectsPage";
+import { RateLimitLeakyBucket } from "@articles/contents/rate-limit-with-leaky-bucket/RateLimitLeakyBucket";
 
 export const AppRoutes = () => {
   return (

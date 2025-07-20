@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { useRedirectToHome } from "../../../hooks/useRedirectToHome";
+import { useRedirectToHome } from "@hooks/useRedirectToHome";
 
 interface GlobalWrapperProps {
   children: ReactNode;
