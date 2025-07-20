@@ -10,7 +10,7 @@ export const HomePage = () => {
     <ContentWrapper>
       <div className="flex flex-col">
         <SectionTitle label="Olá," />
-        <p className="block mt-4 isolate">
+        <p className="block isolate">
           Meu nome é Gabriel - Desenvolvedor FullStack, com foco em Backend.
           Entusiasta do Typescript, Node.js/Bun e React. Aqui compartilho meus
           projetos, artigos e pensamentos sobre tecnologia e desenvolvimento de

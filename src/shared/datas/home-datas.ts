@@ -12,7 +12,7 @@ export const socialItemsData: SocialItem[] = [
 export const stacksData = [
   {
     category: "Backend",
-    techs: [" NodeJs/Bun", "NestJs", "Fastify", "ElysiaJs"],
+    techs: [" NodeJs", "Bun", "NestJs", "Fastify", "ElysiaJs"],
   },
   {
     category: "Frontend",
@@ -24,6 +24,6 @@ export const stacksData = [
   },
   {
     category: "Tools",
-    techs: ["RabbitMQ", "Prisma/TypeORM", "Docker", "Git", "Jest"],
+    techs: ["RabbitMQ", "Prisma", "TypeORM", "Docker", "Git", "Jest"],
   },
 ];
