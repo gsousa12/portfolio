@@ -15,19 +15,22 @@ export const HeaderMenuItems = ({ menuItems }: HeaderMenuItemsProps) => {
   return (
     <nav className="flex gap-3">
       {menuItems.map((item) => {
-        const isActive = location.pathname === item.href;
+        const isActivePatch =
+          item.href === "/articles"
+            ? location.pathname.startsWith("/articles")
+            : location.pathname === item.href;
 
         return (
           <Link
             key={item.href}
             to={item.href}
             className={`flex flex-col items-center px-1 ${
-              location.pathname === item.href ? "font-bold" : ""
+              isActivePatch ? "font-bold" : ""
             }`}
           >
             <span>{item.label}</span>
 
-            {isActive && (
+            {isActivePatch && (
               <span
                 className="
                   mt-1 w-1 h-1 border-x-4 border-x-transparent 
