@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <footer
       className={`flex flex-col gap-1  text-sm ${
-        isMobile ? " items-center mt-4" : " items-center py-8 mt-10"
+        isMobile ? " items-center mt-4" : " items-center py-8 mt-1"
       }`}
     >
       <div className="flex gap-4">
