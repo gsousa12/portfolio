@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import { GithubSGV } from "../sgvs/GithubSGV";
-import { LinkedinSGV } from "../sgvs/LinkedinSGV";
+import { GithubSGV } from "@components/sgvs/GithubSGV";
+import { LinkedinSGV } from "@components/sgvs/LinkedinSGV";
 
 type SocialIconName = "github" | "linkedin";
 

@@ -1,10 +1,10 @@
 import { ProjectItem } from "@datas/project-list-datas";
 import { useMobileDetect } from "@hooks/useMobileDetect";
 import { getStackColors } from "@utils/utils";
-import { ActionButton } from "../action-button/ActionButton";
-import { Badge } from "../badge/Badge";
-import { GlobeSGV } from "../sgvs/GlobeSGV";
-import { SquareCodeSGV } from "../sgvs/SquareCodeSGV";
+import { ActionButton } from "@components/action-button/ActionButton";
+import { Badge } from "@components/badge/Badge";
+import { GlobeSGV } from "@components/sgvs/GlobeSGV";
+import { SquareCodeSGV } from "@components/sgvs/SquareCodeSGV";
 
 interface ProjectCardProps {
   project: ProjectItem;

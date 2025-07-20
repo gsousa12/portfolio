@@ -1,5 +1,5 @@
 import { ProjectItem, ProjectsListData } from "@datas/project-list-datas";
-import { ProjectCard } from "../project-card/ProjectCard";
+import { ProjectCard } from "@components/project-card/ProjectCard";
 
 export const ProjectsList = () => {
   const projectsList: ProjectItem[] = ProjectsListData;
