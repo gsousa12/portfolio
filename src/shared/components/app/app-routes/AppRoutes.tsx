@@ -3,7 +3,7 @@ import { NotFoundPage } from "../../not-found-page/NotFoundPage";
 import { HomePage } from "@home/home-page/HomePage";
 import { ArticlesPage } from "@articles/articles-page/ArticlesPage";
 import { ProjectsPage } from "@projects/projects-page/ProjectsPage";
-import { RateLimitLeakyBucket } from "@articles/contents/rate-limit-with-leaky-bucket/RateLimitLeakyBucket";
+import { HttpHeadersArticle } from "@/sections/articles/contents/http-headers/HttpHeadersArticle";
 
 export const AppRoutes = () => {
   return (
@@ -14,10 +14,7 @@ export const AppRoutes = () => {
         <Route path="/home" element={<HomePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/articles" element={<ArticlesPage />} />
-        <Route
-          path="/articles/rate-limit-with-leaky-bucket"
-          element={<RateLimitLeakyBucket />}
-        />
+        <Route path="/articles/http-headers" element={<HttpHeadersArticle />} />
       </Routes>
     </main>
   );

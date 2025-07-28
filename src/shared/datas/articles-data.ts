@@ -6,8 +6,8 @@ export type ArticleData = {
 
 export const articlesListData: ArticleData[] = [
   {
-    title: "Criando um Rate Limit com Leaky Bucket",
+    title: "Entendendo Cabeçalhos HTTP na Prática",
     data: "20 Jun, 2025",
-    navigateTo: "/articles/rate-limit-with-leaky-bucket",
+    navigateTo: "/articles/http-headers",
   },
 ];
