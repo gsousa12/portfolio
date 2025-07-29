@@ -28,7 +28,7 @@ export const HeaderMenuItems = ({ menuItems }: HeaderMenuItemsProps) => {
               isActivePatch ? "font-bold" : ""
             }`}
           >
-            <span>{item.label}</span>
+            <span className="hover:scale-102 cursor-pointer">{item.label}</span>
 
             {isActivePatch && (
               <span

@@ -1,25 +1,32 @@
 import { articlesListData } from "@/shared/datas/articles-data";
-import { Fragment } from "react/jsx-runtime";
 
 export const ArticlesList = () => {
   const articlesList = articlesListData;
   return (
-    <Fragment>
+    <div>
       {articlesList.map((article, index) => (
         <div
           key={index}
-          className="flex flex-col gap-2 p-4 border border-gray-400 rounded-lg hover:bg-gray-50 transition-colors"
+          className="flex items-center justify-between py-3 px-2 mt-3 hover:bg-gray-50 transition-colors"
+          style={{
+            borderBottom:
+              index !== articlesList.length - 1 ? "1px solid #e5e7eb" : "none",
+          }}
         >
-          <h3 className="text-lg font-semibold">{article.title}</h3>
-          <p className="text-sm text-gray-600">{article.data}</p>
+          <div className="flex items-center gap-4">
+            <span className="text-xs text-gray-500">{article.date}</span>
+            <h3 className="text-base font-bold text-gray-900">
+              {article.title}
+            </h3>
+          </div>
           <a
             href={article.navigateTo}
-            className="text-blue-600 hover:underline"
+            className="text-blue-600 text-sm font-medium hover:underline"
           >
             Ler mais
           </a>
         </div>
       ))}
-    </Fragment>
+    </div>
   );
 };

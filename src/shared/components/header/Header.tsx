@@ -1,10 +1,12 @@
 import { menuItemsData } from "@datas/menu-items-data";
 import { HeaderMenuItems } from "@components/header-menu-items/HeaderMenuItems";
+import { DownloadResumeButton } from "../download-resume/DownloadResumeButton";
 
 export const Header = () => {
   return (
-    <div className="flex justify-between">
+    <header className="flex items-center justify-between">
       <HeaderMenuItems menuItems={menuItemsData} />
-    </div>
+      <DownloadResumeButton />
+    </header>
   );
 };
