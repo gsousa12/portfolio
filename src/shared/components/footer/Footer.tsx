@@ -17,17 +17,17 @@ export const Footer = () => {
           rel="noopener noreferrer"
           className="text-gray-900 hover:underline"
         >
-          Code
+          Source Code
         </a>
 
-        <a
+        {/* <a
           href="https://x.com/gabzin_dev"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-900 hover:underline"
         >
           @gabzin_dev
-        </a>
+        </a> */}
       </div>
       <span className="text-gray-900 mt-2">© {year} Gabriel Sousa</span>
     </footer>

@@ -54,7 +54,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           src={project.imageUrl}
           alt={project.name}
           className="w-full h-auto object-cover"
-          style={{ width: "620px", height: "324px" }}
+          style={{ width: "780px", height: "324px" }}
         />
       </div>
       <div className="flex">
