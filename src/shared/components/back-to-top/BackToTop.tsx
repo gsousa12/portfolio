@@ -33,7 +33,7 @@ export const BackToTop = () => {
            isMobile ? " bottom-8 right-8" : "right-8 top-8 flex"
          }`}
       >
-        ▲ {!isMobile && "Voltar ao topo"}
+        ▲ {!isMobile && "Back to top"}
       </button>
     </>
   );

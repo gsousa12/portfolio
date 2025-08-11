@@ -15,7 +15,7 @@ export const DownloadResumeButton = memo(() => {
       "
     >
       <FileDown className="w-4 h-4" />
-      <span className="hidden sm:inline-block">Baixe meu currículo</span>
+      <span className="hidden sm:inline-block">Download My Resume</span>
     </a>
   );
 });
