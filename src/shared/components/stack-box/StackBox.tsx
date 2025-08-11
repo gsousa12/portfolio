@@ -13,7 +13,7 @@ export const StackBox = ({ stacks }: StackBoxProps) => (
       id="stacks-title"
       className="mb-6 text-lg md:text-xl font-semibold tracking-tight text-gray-900"
     >
-      Stack de Tecnologias:
+      Technology Stack:
     </h2>
     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
       {stacks.map(({ category, techs }) => (

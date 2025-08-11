@@ -49,12 +49,14 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
       <div className="p-6 border-b border-gray-400">
         <p className="text-gray-600 leading-relaxed">{project.description}</p>
       </div>
-      <div className="border-b border-gray-400">
+      <div
+        className="border-b border-gray-400"
+        style={{ width: "780px", height: "324px" }}
+      >
         <img
           src={project.imageUrl}
           alt={project.name}
-          className="w-full h-auto object-cover"
-          style={{ width: "780px", height: "324px" }}
+          className="w-full h-full object-contain"
         />
       </div>
       <div className="flex">

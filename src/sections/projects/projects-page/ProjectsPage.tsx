@@ -6,7 +6,7 @@ export const ProjectsPage = () => {
   return (
     <ContentWrapper>
       <div className="flex flex-col">
-        <SectionTitle label="Projetos" />
+        <SectionTitle label="Projects" />
         <ProjectsList />
       </div>
     </ContentWrapper>
