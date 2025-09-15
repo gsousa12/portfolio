@@ -1,4 +1,4 @@
-// import { ArticlesList } from "@/shared/components/articles-list/ArticlesList";
+import { ArticlesList } from "@/shared/components/articles-list/ArticlesList";
 import { SectionTitle } from "@components/section-title/SectionTitle";
 import { ContentWrapper } from "@components/wrappers/content-wrapper/ContentWrapper";
 
@@ -7,8 +7,8 @@ export const ArticlesPage = () => {
     <ContentWrapper>
       <div className="flex flex-col">
         <SectionTitle label="Articles" />
-        {/* <ArticlesList /> */}
-        <>Under Construction......</>
+        <ArticlesList />
+        {/* <>Under Construction......</> */}
       </div>
     </ContentWrapper>
   );

@@ -3,7 +3,7 @@ import { NotFoundPage } from "../../not-found-page/NotFoundPage";
 import { HomePage } from "@home/home-page/HomePage";
 import { ArticlesPage } from "@articles/articles-page/ArticlesPage";
 import { ProjectsPage } from "@projects/projects-page/ProjectsPage";
-// import { HttpHeadersArticle } from "@/sections/articles/contents/http-headers/HttpHeadersArticle";
+import { AsyncJsArticle } from "@/sections/articles/contents/async-js/async-js";
 
 export const AppRoutes = () => {
   return (
@@ -14,7 +14,7 @@ export const AppRoutes = () => {
         <Route path="/home" element={<HomePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/articles" element={<ArticlesPage />} />
-        {/* <Route path="/articles/http-headers" element={<HttpHeadersArticle />} /> */}
+        <Route path="/articles/async-js" element={<AsyncJsArticle />} />
       </Routes>
     </main>
   );

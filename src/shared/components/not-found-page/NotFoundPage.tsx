@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { useMobileDetect } from "@hooks/useMobileDetect";
+import { ContentWrapper } from "../wrappers/content-wrapper/ContentWrapper";
 
 export const NotFoundPage = () => {
   const isMobile = useMobileDetect();
@@ -10,19 +11,21 @@ export const NotFoundPage = () => {
   };
 
   return (
-    <div
-      className={`flex flex-col items-center justify-center ${
-        isMobile ? "mt-45 mb-45" : "mt-50 mb-50"
-      }`}
-    >
-      <h1 className="text-4xl font-bold mb-2">404</h1>
-      <p className="mb-6 text-gray-600">Página não encontrada.</p>
-      <button
-        className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-800 hover:cursor-pointer"
-        onClick={handleBack}
+    <ContentWrapper>
+      <div
+        className={`flex flex-col items-center justify-center ${
+          isMobile ? "mt-45 mb-45" : "mt-50 mb-50"
+        }`}
       >
-        Voltar
-      </button>
-    </div>
+        <h1 className="text-4xl font-bold mb-2">404</h1>
+        <p className="mb-6 text-gray-600">Página não encontrada.</p>
+        <button
+          className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-800 hover:cursor-pointer"
+          onClick={handleBack}
+        >
+          Voltar
+        </button>
+      </div>
+    </ContentWrapper>
   );
 };

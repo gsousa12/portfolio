@@ -12,11 +12,11 @@ export const socialItemsData: SocialItem[] = [
 export const stacksData = [
   {
     category: "Backend",
-    techs: [" NodeJs", "Bun", "NestJs", "Fastify", "ElysiaJs"],
+    techs: [" NodeJs", "NestJs", "Fastify", "Express"],
   },
   {
     category: "Frontend",
-    techs: ["React", "Tailwind", "NextJs"],
+    techs: ["React", "Tailwind", "NextJs", "SCss"],
   },
   {
     category: "Database",

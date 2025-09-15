@@ -1,12 +1,38 @@
+import { motion } from "framer-motion";
 import { articlesListData } from "@/shared/datas/articles-data";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10,
+    } as const,
+  },
+};
 
 export const ArticlesList = () => {
   const articlesList = articlesListData;
+
   return (
-    <div>
-      {articlesList.map((article, index) => (
-        <div
+    <motion.div variants={containerVariants} initial="hidden" animate="visible">
+      {articlesList.reverse().map((article, index) => (
+        <motion.div
           key={index}
+          variants={itemVariants}
           className="flex items-center justify-between py-3 px-2 mt-3 hover:bg-gray-50 transition-colors"
           style={{
             borderBottom:
@@ -25,8 +51,8 @@ export const ArticlesList = () => {
           >
             Ler mais
           </a>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };

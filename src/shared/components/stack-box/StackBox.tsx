@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export interface Stack {
   category: string;
   techs: string[];
@@ -7,6 +9,29 @@ interface StackBoxProps {
   stacks: Stack[];
 }
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 260,
+      damping: 20,
+    },
+  },
+};
+
 export const StackBox = ({ stacks }: StackBoxProps) => (
   <section aria-labelledby="stacks-title">
     <h2
@@ -15,10 +40,16 @@ export const StackBox = ({ stacks }: StackBoxProps) => (
     >
       Technology Stack:
     </h2>
-    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
+    <motion.div
+      className="grid gap-5 sm:grid-cols-2 lg:grid-cols-2"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       {stacks.map(({ category, techs }) => (
-        <article
+        <motion.article
           key={category}
+          variants={itemVariants as any}
           className="group relative rounded-xl border border-gray-300
                      bg-white/60 
                      backdrop-blur p-4 transition-shadow hover:shadow-md"
@@ -39,8 +70,8 @@ export const StackBox = ({ stacks }: StackBoxProps) => (
               </li>
             ))}
           </ul>
-        </article>
+        </motion.article>
       ))}
-    </div>
+    </motion.div>
   </section>
 );
