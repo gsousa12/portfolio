@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { articlesListData } from "@/shared/datas/articles-data";
+// import { articlesListData } from "@/shared/datas/articles-data";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -11,25 +11,25 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 10,
-    } as const,
-  },
-};
+// const itemVariants = {
+//   hidden: { y: 20, opacity: 0 },
+//   visible: {
+//     y: 0,
+//     opacity: 1,
+//     transition: {
+//       type: "spring",
+//       stiffness: 100,
+//       damping: 10,
+//     } as const,
+//   },
+// };
 
 export const ArticlesList = () => {
-  const articlesList = articlesListData;
+  // const articlesList = articlesListData;
 
   return (
     <motion.div variants={containerVariants} initial="hidden" animate="visible">
-      {articlesList.reverse().map((article, index) => (
+      {/* {articlesList.reverse().map((article, index) => (
         <motion.div
           key={index}
           variants={itemVariants}
@@ -50,9 +50,10 @@ export const ArticlesList = () => {
             className="text-blue-600 text-sm font-medium hover:underline"
           >
             Ler mais
-          </a>
-        </motion.div>
-      ))}
+          </a> */}
+      {/* </motion.div>
+      ))} */}
+      <span>Em construção...</span>
     </motion.div>
   );
 };

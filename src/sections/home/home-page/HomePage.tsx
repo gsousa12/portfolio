@@ -8,12 +8,13 @@ export const HomePage = () => {
   return (
     <ContentWrapper>
       <div className="flex flex-col">
-        <SectionTitle label="Hi," />
+        <SectionTitle label="Olá," />
         <p className="block isolate">
-          My name is Gabriel - a FullStack Developer with a focus on Backend.
-          I'm an enthusiast of TypeScript, Node.js/Bun, and React. Here, I share
-          my projects, articles, and thoughts on technology and software
-          development. Feel free to connect with me!
+          Meu nome é Gabriel - sou Desenvolvedor FullStack com foco em Backend.
+          Sou um entusiasta de TypeScript/JavaScript, NodeJs/Bun e React. Aqui,
+          compartilho meus projetos, artigos e reflexões sobre tecnologia e
+          desenvolvimento de software. Sinta-se à vontade para se conectar
+          comigo!
         </p>
         <SocialBox socialItems={socialItemsData} />
         <StackBox stacks={stacksData} />

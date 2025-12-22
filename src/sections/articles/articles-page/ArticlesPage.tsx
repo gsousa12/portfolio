@@ -6,9 +6,8 @@ export const ArticlesPage = () => {
   return (
     <ContentWrapper>
       <div className="flex flex-col">
-        <SectionTitle label="Articles" />
+        <SectionTitle label="Artigos" />
         <ArticlesList />
-        {/* <>Under Construction......</> */}
       </div>
     </ContentWrapper>
   );

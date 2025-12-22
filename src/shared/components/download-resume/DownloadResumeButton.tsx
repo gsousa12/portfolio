@@ -17,7 +17,7 @@ export const DownloadResumeButton = memo(() => {
       whileHover={{ scale: 1.02 }}
     >
       <FileDown className="w-4 h-4" />
-      <span className="hidden sm:inline-block">Download My Resume</span>
+      <span className="hidden sm:inline-block">Currículo</span>
     </motion.a>
   );
 });

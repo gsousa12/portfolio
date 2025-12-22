@@ -23,7 +23,7 @@ export const stacksData = [
     techs: ["Postgres", "Redis", "Mongo"],
   },
   {
-    category: "Tools",
+    category: "Ferramentas",
     techs: ["RabbitMQ", "Prisma", "TypeORM", "Docker", "Git", "Jest"],
   },
 ];

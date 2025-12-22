@@ -1,5 +1,4 @@
 import { ProjectItem } from "@datas/project-list-datas";
-import { useMobileDetect } from "@hooks/useMobileDetect";
 import { getStackColors } from "@utils/utils";
 import { ActionButton } from "@components/action-button/ActionButton";
 import { Badge } from "@components/badge/Badge";
@@ -11,28 +10,14 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
-  const isMobile = useMobileDetect();
-
   return (
-    <div
-      className="bg-white rounded-lg shadow-sm border border-gray-400 
-    overflow-hidden hover:shadow-md transition-shadow duration-200"
-    >
-      <div
-        className={`p-6 border-b border-gray-400 ${
-          isMobile ? "text-center" : "flex items-center justify-between"
-        }`}
-      >
-        <h3
-          className={`text-xl font-semibold text-gray-900 ${
-            isMobile ? "mb-3" : ""
-          }`}
-        >
+    <div className="bg-white rounded-lg shadow-sm border border-gray-400 overflow-hidden hover:shadow-md transition-shadow duration-200">
+      <div className="p-4 md:p-6 border-b border-gray-400 flex flex-col gap-3 md:flex-row md:items-center md:justify-between text-center md:text-left">
+        <h3 className="text-lg md:text-xl font-semibold text-gray-900">
           {project.name}
         </h3>
-        <div
-          className={`flex gap-2 flex-wrap ${isMobile ? "justify-center" : ""}`}
-        >
+
+        <div className="flex gap-2 flex-wrap justify-center md:justify-start">
           {project.stack.map((tech) => {
             const { color, labelColor } = getStackColors(tech);
             return (
@@ -46,19 +31,24 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           })}
         </div>
       </div>
-      <div className="p-6 border-b border-gray-400">
-        <p className="text-gray-600 leading-relaxed">{project.description}</p>
+
+      <div className="p-4 md:p-6 border-b border-gray-400">
+        <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+          {project.description}
+        </p>
       </div>
-      <div
-        className="border-b border-gray-400"
-        style={{ width: "780px", height: "324px" }}
-      >
-        <img
-          src={project.imageUrl}
-          alt={project.name}
-          className="w-full h-full object-contain"
-        />
+
+      <div className="border-b border-gray-400 hidden md:block">
+        <div className="w-full h-64 lg:h-80 xl:h-[324px]">
+          <img
+            src={project.imageUrl}
+            alt={project.name}
+            className="w-full h-full object-contain"
+            loading="lazy"
+          />
+        </div>
       </div>
+
       <div className="flex">
         {project.websiteUrl ? (
           <>

@@ -38,7 +38,7 @@ export const StackBox = ({ stacks }: StackBoxProps) => (
       id="stacks-title"
       className="mb-6 text-lg md:text-xl font-semibold tracking-tight text-gray-900"
     >
-      Technology Stack:
+      Minha Stack:
     </h2>
     <motion.div
       className="grid gap-5 sm:grid-cols-2 lg:grid-cols-2"
