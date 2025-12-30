@@ -41,7 +41,7 @@ export const ProjectsList = () => {
           <ProjectCard project={project} />
         </motion.div>
       ))} */}
-      <span>Em contrução...</span>
+      <span>Em construção...</span>
     </motion.div>
   );
 };
