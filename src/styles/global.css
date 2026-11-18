@@ -39,6 +39,16 @@
   --focus: var(--accent);
 }
 
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --background: #181c1d;
+  --text: #f1f0eb;
+  --muted: #b0b9b7;
+  --border: #373f40;
+  --hover: #292f30;
+  --accent: #a6cff0;
+}
+
 * {
   box-sizing: border-box;
 }
