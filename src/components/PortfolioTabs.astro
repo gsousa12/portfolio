@@ -1,0 +1,70 @@
+<section aria-label="Publicações" data-portfolio-tabs>
+  <div class="tab-list" role="tablist" aria-label="Seções do blog" hidden>
+    <button id="articles-tab" type="button" role="tab" aria-selected="true" aria-controls="articles-panel">
+      Artigos
+    </button>
+    <button id="projects-tab" type="button" role="tab" aria-selected="false" aria-controls="projects-panel" tabindex="-1">
+      Projetos
+    </button>
+  </div>
+
+  <section id="articles-panel" class="tab-panel" aria-labelledby="articles-title" data-tab-panel>
+    <h2 class="section-title" id="articles-title">Artigos</h2>
+    <p class="panel-note">Ainda não há artigos publicados.</p>
+  </section>
+
+  <section id="projects-panel" class="tab-panel" aria-labelledby="projects-title" data-tab-panel>
+    <h2 class="section-title" id="projects-title">Projetos</h2>
+    <p class="panel-note">Ainda não há projetos publicados aqui.</p>
+  </section>
+</section>
+
+<script>
+  import '../scripts/portfolio-tabs';
+</script>
+
+<style>
+  .tab-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 clamp(var(--space-3), 3vw, var(--space-8));
+    border-bottom: var(--rule);
+  }
+
+  [role='tab'] {
+    min-height: var(--target-size);
+    margin-bottom: -1px;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    padding: var(--space-2) 0;
+    background: transparent;
+    color: var(--muted);
+    font-size: var(--text-small);
+    cursor: pointer;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+  }
+
+  [role='tab']:hover,
+  [role='tab'][aria-selected='true'] {
+    color: var(--accent);
+  }
+
+  [role='tab'][aria-selected='true'] {
+    border-bottom-color: currentColor;
+  }
+
+  .tab-panel {
+    margin-top: var(--space-6);
+    border-radius: var(--radius-control);
+  }
+
+  .tab-list[hidden] + .tab-panel {
+    margin-top: 0;
+  }
+
+  .panel-note {
+    margin: var(--space-2) 0 0;
+    color: var(--muted);
+    font-size: var(--text-small);
+  }
+</style>

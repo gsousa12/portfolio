@@ -1,0 +1,150 @@
+---
+import type { Experience } from '../data/profile';
+
+interface Props {
+  experiences: Experience[];
+}
+
+const { experiences } = Astro.props;
+const orderedExperiences = [...experiences].reverse();
+---
+
+<section class="experience" aria-labelledby="experiences-title">
+  <details open>
+    <summary>
+      <h2 class="section-title" id="experiences-title">Experiências</h2>
+      <span class="icon-control" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </span>
+    </summary>
+
+    {
+      orderedExperiences.map((experience) => (
+        <article class="company">
+          <h3>{experience.company}</h3>
+
+          <ol class="roles" role="list">
+            {[...experience.roles].reverse().map((role) => (
+              <li>
+                <div class="role-heading">
+                  <h4 lang="en">{role.title}</h4>
+                  <p class="period">{role.period}</p>
+                </div>
+                <p class="technologies">{role.stack.join(', ')}</p>
+              </li>
+            ))}
+          </ol>
+        </article>
+      ))
+    }
+  </details>
+</section>
+
+<style>
+  .experience {
+    margin-top: var(--section-space);
+    border-block: var(--rule);
+  }
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding-block: var(--space-3);
+    border-radius: var(--radius-control);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary:hover .icon-control {
+    background: var(--hover);
+    color: var(--text);
+  }
+
+  summary svg {
+    width: var(--space-5);
+    height: var(--space-5);
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.6;
+    transition: transform var(--transition-fast);
+  }
+
+  details[open] summary svg {
+    transform: rotate(180deg);
+  }
+
+  .company {
+    display: grid;
+    gap: var(--space-2) var(--space-8);
+    padding-block: var(--space-5);
+    border-top: var(--rule);
+  }
+
+  h3,
+  h4,
+  .period,
+  .technologies {
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+    font-weight: 650;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 550;
+  }
+
+  .roles {
+    display: grid;
+    gap: var(--space-5);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .roles li + li {
+    padding-top: var(--space-5);
+    border-top: var(--rule);
+  }
+
+  .role-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-1) var(--space-4);
+  }
+
+  .period {
+    color: var(--muted);
+    font-size: var(--text-meta);
+    line-height: 1.5;
+  }
+
+  .technologies {
+    max-width: 65ch;
+    margin-top: var(--space-2);
+    color: var(--muted);
+    font-size: var(--text-small);
+    overflow-wrap: anywhere;
+  }
+
+  @media (min-width: 42rem) {
+    .company {
+      grid-template-columns: 9rem minmax(0, 1fr);
+    }
+  }
+</style>

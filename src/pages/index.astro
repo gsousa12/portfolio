@@ -1,0 +1,68 @@
+---
+import ExperienceTimeline from '../components/ExperienceTimeline.astro';
+import PortfolioTabs from '../components/PortfolioTabs.astro';
+import { experiences, profile } from '../data/profile';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'gabs - blog';
+---
+
+<BaseLayout title={title} description={`Blog de ${profile.givenName} ${profile.familyName}, ${profile.role}.`}>
+  <div class="content-shell">
+    <main>
+      <div class="profile-intro">
+        <h1>{profile.givenName} | <span lang="en">{profile.role}</span></h1>
+        <nav class="profile-links" aria-label="Redes sociais">
+          <a href={profile.linkedin.href} target="_blank" rel="noreferrer">
+            LinkedIn @{profile.linkedin.username} <span aria-hidden="true">↗</span>
+          </a>
+          <a href={profile.github.href} target="_blank" rel="noreferrer">
+            GitHub @{profile.github.username} <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </div>
+
+      <PortfolioTabs />
+      <ExperienceTimeline experiences={experiences} />
+    </main>
+  </div>
+</BaseLayout>
+
+<style>
+  .content-shell {
+    padding-block: var(--section-space);
+  }
+
+  .profile-intro {
+    margin-bottom: var(--space-4);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .profile-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--space-2);
+    font-size: var(--text-meta);
+  }
+
+  .profile-links a {
+    display: inline-flex;
+    min-width: 0;
+    min-height: var(--target-size);
+    align-items: center;
+    gap: var(--space-1);
+    border-radius: var(--radius-control);
+    overflow-wrap: anywhere;
+    text-decoration: none;
+  }
+
+  .profile-links a:hover {
+    text-decoration: underline;
+  }
+</style>
